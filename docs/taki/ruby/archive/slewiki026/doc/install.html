@@ -1,0 +1,89 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+  <link rel="stylesheet" type="text/css" href="../theme/template/template.css">
+  <link rel="stylesheet" type="text/css" href="../theme/grass/grass.css">
+  <title>SleWiki_install</title>
+</head>
+<body>
+
+<h1>インストール方法</h1>
+  <ol>
+    <li>実行ファイル(index.cgi)一行目のパスを環境に応じて書き換える</li>
+    <li>以下を参照にパーミッションを付ける。</li>
+  </ol>
+
+<h2>概要</h2>
+<p>
+概要は以下のようになります。<br>
+サーバーによって設定しなければならないパーミッションが異なるので<br>
+各サーバーでの設定方法を確認の上設定を行ってください。
+</p>
+<table>
+<tr>
+  <th>/</th><th>一般サーバ</th><th>suEXECサーバ/CGIWrapサーバ</th>
+</tr>
+<tr>
+  <th>実行ファイル（拡張子がcgiのもの）</th><th>755 or 705</th><th>700</th>
+</tr>
+<tr>
+  <th>lib, template, html等  </th><th>644</th><th>644</th>
+</tr>
+<tr>
+  <th>storeフォルダ</th><th>777 or 707</th><th>700</th>
+</tr>
+
+</table>
+<h2>詳細</h2>
+
+<h3>/</h3>
+swconfig.rb 604 or 600<br>
+history.txt<br>
+index.cgi 755 or 700  実行ファイル<br>
+index.html 644<br>
+slewiki.rb 604 or 600<br>
+msg_j.cfg 604 or 600<br>
+README.ja<br>
+todo.txt<br>
+
+<h3>store/  707 or 700  データ保存ディレクトリ</h3>
+<h3>lib/ 705 or 700  ライブラリディレクトリ</h3>
+以下604 or 600<br>
+filelock.rb<br>
+fileutils.rb<br>
+gzip.rb<br>
+search.rb<br>
+stringutils.rb<br>
+utils.rb<br>
+
+<h3>template/ 755  テンプレートディレクトリ</h3>
+以下604 or 600<br>
+
+admin.rhtml<br>
+authpage.rhtml<br>
+editform.rhtml<br>
+footer.rhtml<br>
+header.rhtml<br>
+pageform.rhtml<br>
+
+
+<h3>theme/ 755 テーマディレクトリ</h3>
+grass/　755<br>
+grass.css 644<br>
+
+terminal/　755<br>
+terminal.css 644<br>
+
+orange/　755<br>
+orange.css 644<br>
+
+blue/　755<br>
+blue.css 644<br>
+
+template/　755<br>
+template.css 644<br>
+
+<br>
+
+</body>
+</html>

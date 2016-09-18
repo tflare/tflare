@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        
+        <title>MhtViewer - tflare.com</title>
+        
+        <link rel="stylesheet" type="text/css" href="../styles.css" />
+        <link rel=icon href=../favicon.png sizes="16x16" type="image/png">
+        <!--[if lt IE 9]>  
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+        <![endif]-->  
+        
+    </head>
+    
+    <body>
+    	
+    	<section id="page"> 
+    
+            <header> 
+            
+                <hgroup>
+                    <h1>MhtViewer</h1>
+                </hgroup>
+                                
+                <nav class="clear"> 
+                    <ul>
+                        <li><a href="#Overview">Overview</a></li>
+                        <li><a href="#Screenshots">Screenshots</a></li>
+                        <li><a href="#Known Issues">Known Issues</a></li>
+                        <li><a href="#ChangeLog">ChangeLog</a></li>
+                        <li><a href="#Apk">Apk</a></li>
+                        <li><a href="#BugTracker">BugTracker</a></li>
+                    </ul>
+                </nav>
+            
+            </header>
+            
+            <section id="articles"> 
+
+                <div class="line"></div>                  
+                <article id="Overview"> 
+                    <h2>Overview</h2>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="articleBody clear">                    
+                       
+                        <p>MhtViewer is a viewer of the archive file of a Web page created by MHTML form. 
+It was created in order to read the mht file of a long sentence. </p>
+<p>
+<ul>
+ <li>Mht file reads and displays</li>
+ <li>Simple bookmark function</li>
+ <li>Support booting from a file manager </li>
+ </ul>
+</p>
+<a href="https://play.google.com/store/apps/details?id=com.tflare.mhtviewer">MhtViewer Google Play</a>
+
+                    </div>
+                </article>
+
+                <div class="line"></div>                  
+                <article id="Screenshots">
+                    <h2>Screenshots</h2>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="articleBody clear">   
+	                <a href="img/MhtViewer_directory.png"><img src="img/MhtViewer_directory.png" width="192" height="320" /></a>
+	                <a href="img/MhtViewer_top.png"><img src="img/MhtViewer_top.png" width="192" height="320" /></a>
+	                <a href="img/MhtViewer_view.png"><img src="img/MhtViewer_view.png" width="192" height="320" /></a>
+	                <a href="img/MhtViewer_scroll.png"><img src="img/MhtViewer_scroll.png" width="192" height="320" /></a>
+
+                    </div>
+                </article>
+
+                <div class="line"></div>                  
+                <article id="Known Issues"> 
+                    <h2>Known Issues</h2>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="articleBody clear">                    
+                       
+<p>
+<ul>
+ <li>MhtViewer does not correspond to the attached file of e-mail. 
+I do not support because a side effect is too strong.
+(If the attached file of e-mail is chosen, MhtViewer will serve as a candidate for selection by all the files.)
+Please start MhtViewer after you save a file attachment.</li>
+ <li>Unless url() is used at the time of import of css, it is not reflected when the directory is specified as css of the import point. </li>
+ <li>Been no support for multiple tabs UnMHT.</li>
+ </ul>
+</p>
+
+                    </div>
+                </article>
+
+                <div class="line"></div>
+                <article id="ChangeLog"> 
+                    <h2>ChangeLog</h2>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="articleBody clear">
+                        <p>1.0.9 Updated all storage so that directory when selecting target.(It is valid when there is no setting in the home directory.)</p>
+                        <p>1.0.8 Fixed a text description of the mht file home directory does not.</p>
+                        <p>1.0.7 Fixed crash in specific file events.</p>
+                        <p>1.0.6 Fixed crash during the file load events.</p>
+                        <p>1.0.5 Fix the long file names in the directory selection screen, if you omit the file name.</p>
+                        <p>1.0.5 Response to the events of the press back during the process to crash when viewing the Recently Viewed.</p>
+                        <p>1.0.4 Modified to display the file name in the directory selection screen.</p>
+                        <p>1.0.4 It supports extension mhtml.</p>
+                        <p>1.0.4 Minor improvements of internal processing.</p>
+                        <p>1.0.3 Modified so that it can change the sorting method for a list of documents.</p>
+                        <p>1.0.3 Modified to sort by name the default sorting method.</p>
+                        <p>1.0.3 Modified of the wording.</p>
+                        <p>1.0.2 When setting the home directory, pressing the UP button in the top-level directory, corrected for reaction events is lost.</p>
+                        <p>1.0.0 Modified so that it can set the home directory specified in the dialog.</p>
+                        <p>1.0.0 Not only the hierarchy under the home directory, added as a folder home directory to search for himself.</p>
+                        <p>0.9.27 When charset of html and different charset are specified before html, it corresponds to the phenomenon which garbled characters generate.</p>
+                        <p>0.9.27 The treatment of the last file corresponds to the phenomenon (a picture etc. are not displayed) which becomes imperfect.</p>
+                        <p>0.9.26 Correspondence to the case where boundary changes and returns.</p>
+                        <p>0.9.25 If you select a folder other than their own cache, fix the problem had been file not found.</p>
+                        <p>0.9.25 Erasable individually modified to the cache when the cache click the field long.</p>
+                        <p>0.9.25 Add a theme.</p>
+                        <p>0.9.24 Minor fixes for layout, Other minor fixes are part of.</p>
+                        <p>0.9.23 Correspondence to the case where boudary changes in the middle of a file.</p>
+                        <p>0.9.23 Correspondence to the case where there is no html in the head of a file.</p>
+                        <p>0.9.22 When a file does not exist, it corrects about the phenomenon which carries out an abnormal end.</p>
+                        <p>0.9.21 It corrects so that charset encoding can be changed after a display (experimental function).</p>
+
+                    </div>
+                </article>
+
+                
+                <div class="line"></div>
+                <article id="Apk"> 
+                    <h2>Apk</h2>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="articleBody clear">
+                      <p><a href="apk/MhtViewer1.0.9.apk">MhtViewer 1.0.9</a></p>
+                      <p><a href="apk/MhtViewer1.0.8.apk">MhtViewer 1.0.8</a></p>
+                      <p><a href="apk/MhtViewer1.0.7.apk">MhtViewer 1.0.7</a></p>
+                      <p><a href="apk/MhtViewer1.0.6.apk">MhtViewer 1.0.6</a></p>
+                      <p><a href="apk/MhtViewer1.0.5.apk">MhtViewer 1.0.5</a></p>
+                      <p><a href="apk/MhtViewer1.0.4.apk">MhtViewer 1.0.4</a></p>
+                      <p><a href="apk/MhtViewer1.0.3.apk">MhtViewer 1.0.3</a></p>
+                      <p><a href="apk/MhtViewer1.0.2.apk">MhtViewer 1.0.2</a></p>
+                      <p><a href="apk/MhtViewer1.0.0.apk">MhtViewer 1.0.0</a></p>
+                      <p><a href="apk/Donate.apk">Donate test</a></p>
+                    </div>
+                </article>
+
+                <div class="line"></div>
+                <article id="BugTracker"> 
+                    <h2>BugTracker</h2>
+                    
+                    <div class="line"></div>
+                    
+                    <div class="articleBody clear">                    
+                       
+                        <p><a href="http://tflare.com/taki/bts/html/guest.cgi?action=top&project=MhtViewer">BugTracker</a></p>
+                    </div>
+                </article> 
+
+        <footer>
+           <div class="line"></div>           
+           <p>Copyright 2012 - hiroyuki taki<a href="http://tflare.com/">tflare.com</a></p> 
+        </footer>
+            
+		</section> 
+    </body>
+</html>

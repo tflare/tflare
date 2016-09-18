@@ -1,0 +1,50 @@
+/* $Id: blue.css 150 2005-05-28 02:16:43Z taki $   */
+/* Copyright (C) 2004-2005 hiroyuki taki <taki@tflare.com> */
+
+h1{
+	font-style : bold;
+	border-style:outset;
+	border-width:0 0 3 2;
+	background-color:#0099ff;
+	border-color:white;
+}
+
+h2{
+	border-style:outset;
+	border-width:0 0 3 2;
+	background-color:#0099ff;
+	border-color:white;
+
+}
+
+
+h3{
+	border-style:double;
+	border-width:0 0 0 15;
+	background-color:#0099ff;
+	margin-left: 5px;
+}
+
+h4{
+	border-color:#0099ff;
+	background-color:#75a68b;
+	margin-left: 10px;
+}
+
+body{
+	background-color: #80bfff;
+	color:black;
+	padding-left: 50px;
+
+}
+
+input,
+textarea{
+    background: #87cefa;
+}
+
+input:focus,
+textarea:focus,
+tr.listtitle{
+    background-color: #0099ff;
+}

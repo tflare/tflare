@@ -1,0 +1,41 @@
+<%# $Id: admin.rhtml 162 2005-12-17 06:21:28Z taki $ %>
+<h2><%= SleWiki::Msg["admin_page"] %></h2>
+
+<div class="form">
+  <form method="post" name="auth" action="<%= SleWiki::Config[:indexpath] %>">
+    <input type="hidden" name="act" value="adminedit">
+    <input type="hidden" name="random_num" value="<%= SleWiki::Security.set_random_num %>">
+    <%= SleWiki::Msg["change_title"] %>
+    <div class="title"><input type="text" name="title" value="<%= SleWiki::Config[:title] %>" size="30"></div>
+    <br>
+    <%= SleWiki::Msg["change_thema"] %>
+    <select name="thema">
+    <% SleWiki::Thema.index.each do |thema| %>
+      <% if thema == SleWiki::Thema.now  %>
+      <option value="<%= thema %>" selected><%= thema %></option>
+      <% else %>
+      <option value="<%= thema %>"><%= thema %></option>
+      <% end %>
+    <% end %>
+    </select>
+    <br><br>
+    <%= SleWiki::Msg["change_toppage"] %>
+    <select name="toppage">
+    <% SleWiki::TopPage.change_list.each do |list| %>
+      <% if list == SleWiki::TopPage.now  %>
+      <option value="<%= list %>" selected><%= list %></option>
+      <% else %>
+      <option value="<%= list %>"><%= list %></option>
+      <% end %>
+    <% end %>
+    </select>
+    <br><br>
+    <% if SleWiki::Config[:auth] == "private" or SleWiki::Config[:auth] == "protect" %>
+    <%= SleWiki::Msg["user_pass_change"] %>
+    <div class="title">user:<input type="text" name="user" size="15"></div>
+    <div class="title">pass:<input type="password" name="pass" size="15"></div>
+    <br>
+    <% end %>
+    <div class="button"><input type="submit" value="Submit"></div>
+  </form>
+</div>

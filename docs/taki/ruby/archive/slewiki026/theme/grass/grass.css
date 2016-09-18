@@ -1,0 +1,20 @@
+/* $Id: grass.css 151 2005-06-09 14:19:14Z taki $   */
+/* Copyright (C) 2004-2005 hiroyuki taki <taki@tflare.com> */
+
+
+body{
+	background-color: #e0f0d0;
+	color:black;
+	padding-left: 50px;
+}
+
+
+input,
+textarea{
+    background-color: #a9a9a9;
+}
+
+input:focus,
+textarea:focus{
+    background-color: #33cc66;
+}

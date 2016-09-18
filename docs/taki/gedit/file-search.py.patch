@@ -1,0 +1,11 @@
+--- /home/taki/.gnome2/gedit/plugins/file-search_old.py	2010-01-01 22:15:09.000000000 +0900
++++ /home/taki/.gnome2/gedit/plugins/file-search.py	2010-01-01 22:09:26.000000000 +0900
+@@ -387,6 +387,8 @@ class GrepProcess:
+             grepCmd += ["-i"]
+         if not(self.query.isRegExp):
+             grepCmd += ["-F"]
++        if (self.query.isRegExp):
++            grepCmd += ["-E"]
+ 
+         # Assume all file contents are in UTF-8 encoding (AFAIK grep will just search for byte sequences, it doesn't care about encodings):
+         self.queryText = self.queryText.encode("utf-8")

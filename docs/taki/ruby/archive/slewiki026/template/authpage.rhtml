@@ -1,0 +1,14 @@
+<%# $Id: authpage.rhtml 162 2005-12-17 06:21:28Z taki $ %>
+<h2><%= SleWiki::Msg["auth_page"] %></h2>
+<div class="form">
+  <form method="post" name="auth" action="<%= SleWiki::Config[:indexpath] %>">
+    <input type="hidden" name="act" value="<%= @cgi.escape_param('act') %>">
+<% if page_id = @cgi.escape_param('page_id') %>
+    <input type="hidden" name="page_id" value="<%= page_id %>">
+<% end %>
+    <input type="hidden" name="random_num" value="<%= SleWiki::Security.set_random_num %>">
+    <div class="title">user:<input type="text" name="user" size="15"></div>
+    <div class="title">pass:<input type="password" name="pass" size="15"></div>
+    <div class="button"><input type="submit" value="Submit"></div>
+  </form>
+</div>

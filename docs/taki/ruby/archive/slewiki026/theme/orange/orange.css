@@ -1,0 +1,59 @@
+/* $Id: orange.css 150 2005-05-28 02:16:43Z taki $   */
+/* Copyright (C) 2004-2005 hiroyuki taki <taki@tflare.com> */
+
+h1{
+	font-style : bold;
+	border-style:outset;
+	border-width:0 0 3 2;
+	background-color:#ff9900;
+	border-color:white;
+}
+
+h2{
+	border-style:outset;
+	border-width:0 0 3 2;
+	background-color:#ff9900;
+	border-color:white;
+
+}
+
+
+h3{
+	border-style:double;
+	border-width:0 0 0 15;
+	background-color:#ff9900;
+	margin-left: 5px;
+}
+
+h4{
+	background-color:#ff9900;
+	margin-left: 10px;
+}
+
+body{
+	background-color: #ffcc66;
+	padding-left: 50px;
+}
+
+input,
+textarea{
+    background: #757575;
+}
+
+input:focus,
+textarea:focus{
+    background-color: #ffcc66;
+}
+
+
+a:hover {
+    color:#FF6666;
+    background:#383838;
+	text-decoration:underline;
+}
+
+
+tr.listtitle{
+    background-color: #ff9900;
+}
+

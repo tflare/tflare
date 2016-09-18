@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<title>linecache.rb</title>
+<meta name="author" content="taki">
+
+<meta name="copyright" content="&copy;1999-2003 tecno sapport">
+<link rel="stylesheet" type="text/css" href="./css/kihon.css">
+</head>
+<body>
+<a href="index.html"><img src="pict/barmini.png" align="right" alt="HOME" width="90" height="22"></a>
+<a href="index.html"><span>Home</span></a> |
+<h1>linecache.rb</h1>
+<p>
+Rubyにおいてキャッシュ を使って、ランダムアクセスをサポートするクラスです。<br>
+SingletonをMixinしています。
+</p>
+
+<a href="ruby/linecache.tar.bz2">linecache.tar.bz2(7.24kb)</a>
+<pre>
+
+使い方例
+----------------------------------------
+pass = Dir.pwd + "/foo.txt"
+
+line = Linecache.instance
+puts line.getline_cache(pass, 3)
+puts line.getline_cache(pass, 4)
+----------------------------------------
+このようにして取得できます。
+
+
+クリアするときは以下のようにしてください。
+----------------------------------------
+pass = Dir.pwd + "/foo.txt"
+
+line = Linecache.instance
+line.clear
+----------------------------------------
+</pre>
+<p align="center"><a href="index.html">HOME</a></p>
+
+</body>
+</html>

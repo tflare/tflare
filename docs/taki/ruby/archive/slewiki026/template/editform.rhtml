@@ -1,0 +1,11 @@
+<%# $Id: editform.rhtml 162 2005-12-17 06:21:28Z taki $ %>
+<h2><%= @title %><%= SleWiki::Msg["its_edit"] %></h2>
+<div class="form">
+  <form method="post" name="make_page" action="<%= SleWiki::Config[:indexpath] %>">
+    <input type="hidden" name="act" value="edit_write">
+    <input type="hidden" name="title" value="<%= @title %>">
+    <input type="hidden" name="random_num" value="<%= SleWiki::Security.set_random_num %>">
+    <div class="textarea"><textarea name="text" cols="90" rows="15" wrap="soft"><%= @text %></textarea></div>
+    <div class="button"><input type="submit" value="Submit"></div>
+  </form>
+</div>

@@ -1,0 +1,11 @@
+--- /home/taki/.gnome2/gedit/plugins/file-search_old.glade	2009-02-20 05:36:50.000000000 +0900
++++ /home/taki/.gnome2/gedit/plugins/file-search.glade	2010-01-01 21:59:19.000000000 +0900
+@@ -81,7 +81,7 @@
+                     </child>
+                     <child>
+                       <widget class="GtkCheckButton" id="cbRegExp">
+-                        <property name="visible">False</property>
++                        <property name="visible">True</property>
+                         <property name="can_focus">True</property>
+                         <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                         <property name="label" translatable="yes">Regular Expression</property>

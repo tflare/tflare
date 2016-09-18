@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<title>gedit</title>
+<meta name="author" content="taki">
+<meta name="copyright" content="&copy;2004 tecno sapport">
+<link rel="stylesheet" type="text/css" href="../css/kihon.css">
+</head>
+<body>
+<a href="../index.html"><img src="../pict/barmini.png" align="right" alt="HOME" width="90" height="22"></a>
+<a href="../index.html"><span>Home</span></a> |
+<h1>gedit plugin</h1>
+<h2>gedit-file-search</h2>
+geditでフォルダ内検索を実現したかったのだが、<br>
+pluginを探すと見つかった。<br>
+それが<a href="http://oliver.github.com/gedit-file-search/">gedit-file-search</a><br>
+ただし正規表現サポートがされていないため、<br>
+必要であればpluginをつくろうと思っていた。<br>
+ソースを見てみると正規表現サポートは行われているようなのだが無効化されていることが分かった。<br>
+以下を見ると未完成のため無効化されているようである。<br>
+<a href="http://github.com/oliver/gedit-file-search/commit/ead406788062a78996ba82265963a7382c6b5e5d">hide RegExp checkbox</a><br><br>
+
+ソースを見たら動きそうなので正規表現を有効化して、grepオプション-Eを追加したパッチを作った。<br>
+-Eをつけないと正規表現の?が動作しなかったため追加<br>
+<a href="file-search.py.patch">grepオプション-E追加パッチ</a><br>
+<a href="file-search.glade.patch">正規表現チェックボックス有効化パッチ</a><br>
+
+なにか問題があるかもしれないので無保証とします。
+</body>
+</html>

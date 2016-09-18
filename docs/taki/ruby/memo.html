@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<title>ruby memo</title>
+<meta name="author" content="taki">
+<meta name="copyright" content="&copy;2004 tecno sapport">
+<link rel="stylesheet" type="text/css" href="../css/kihon.css">
+</head>
+<body>
+<a href="../index.html"><img src="../pict/barmini.png" align="right" alt="HOME" width="90" height="22"></a>
+<a href="../index.html"><span>Home</span></a> |
+
+<h1>ruby memo</h1>
+
+<p>
+<a href="#expires">1.CGI::Session session_expires</a><br>
+<a href="#concat">2.concatと+</a><br>
+<a href="#cgilocal">3.CGIをローカルで実験</a><br>
+<a href="#csv">4.Arrayとcsv</a><br>
+<a href="#forwardable">5.Forwardable</a><br>
+
+</p>
+
+<h2><a name="expires" id="expires">1.CGI::Sessionの引数 session_expires(ruby1.8以降)</a></h2>
+<p>
+session_expires　秒数を指定してCGI::Sessionで使われているCookie の有効期限を設定する。
+</p>
+
+<h3>例</h3>
+<p>
+session = CGI::Session.new(CGI.new, "session_key" => "hoge",<br>
+　　　　　　　　　　　　　　"session_id" => "bar",<br>
+　　　　　　　　　　　　　　"session_expires" => Time.now + 30 * 60) # 30 minute<br>
+</p>
+<h2><a name="concat" id="concat">2.concatと+</a></h2>
+<p>
+a.concat(b)とa + b<br>
+concatはaにbを連結して返す。<br>
++はaとbを連結して新しいオブジェクトを返す。
+</p>
+
+大量に呼び出す必要がある場合は、concatのほうが明らかに早い。<br>
++が新しいオブジェクトを返すためだ。<br>
+またrubyのStringにはメモリを少し余分に確保してあるので、その範囲内だとrealloc()も起こらない。<br>
+
+<h2><a name="cgilocal" id="cgilocal">3.CGIをローカルで実験</a></h2>
+<p>
+ENV["REQUEST_METHOD"]とCGI::CGI_PARAMSとCGI::CGI_COOKIESを設定してからCGI.newするとローカルでCGIを試せる。<br>
+
+<h3>例</h3>
+<p>
+ENV["REQUEST_METHOD"] = "POST"<br>
+class CGI<br>
+　　CGI_PARAMS  = {'form'=>['value']}<br>
+　　CGI_COOKIES = nil<br>
+end<br><br>
+
+cgi = CGI.new<br>
+#処理<br>
+</p>
+
+<h2><a name="csv" id="csv">4.Arrayとcsv(ruby1.8以降)</a></h2>
+<p>
+require 'csv'<br><br>
+
+#Arrayをcsvに変換するのが<br>
+csv = CSV.generate_line(Array)<br><br>
+
+#csvをArrayに変換するのが<br>
+Array = CSV.parse_line(csv)<br>
+</p>
+
+<p>
+オプションの一つ目がColumn separatorデフォルトで ","<br>
+オプションの二つ目がRow separatorデフォルトで "\r\n or \n"
+</p>
+
+
+<h2><a name="forwardable" id="forwardable">5.Forwardable(ruby1.8以降)</a></h2>
+forwardable.rb
+
+クラスに対しメソッドの委譲機能を定義するモジュール<br>
+<a href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-list/29037">[ruby-list:29037]</a>
+<a href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-list/31898">[ruby-list:31898]</a>
+を参考にする。
+</body>
+</html>

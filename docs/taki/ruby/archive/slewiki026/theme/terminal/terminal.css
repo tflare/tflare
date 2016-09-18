@@ -1,0 +1,61 @@
+/* $Id: terminal.css 150 2005-05-28 02:16:43Z taki $   */
+/* Copyright (C) 2004-2005 hiroyuki taki <taki@tflare.com> */
+
+h1{
+	font-style : bold;
+	border-style:outset;
+	border-width:0 0 3 2;
+	background-color:#757575;
+	border-color:white;
+}
+
+h2{
+	border-style:outset;
+	border-width:0 0 3 2;
+	background-color:#757575;
+	border-color:white;
+
+}
+
+
+h3{
+	border-style:double;
+	border-width:0 0 0 15;
+	background-color:#757575;
+	margin-left: 5px;
+}
+
+h4{
+	border-color:#757575;
+	background-color:#75a68b;
+	margin-left: 10px;
+}
+
+body{
+	background-color: #383838;
+	color:white;
+	padding-left: 50px;
+}
+
+input,
+textarea,
+tr.listtitle{
+    background: #757575;
+}
+
+input:focus,
+textarea:focus{
+ background-color: black;
+ color:white;
+}
+
+a {
+    color:#00ff00;
+}
+
+a:hover {
+    color:#FF6666;
+    background:#383838;
+	text-decoration:underline;
+}
+

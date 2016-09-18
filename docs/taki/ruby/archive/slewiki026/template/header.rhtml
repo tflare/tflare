@@ -1,0 +1,53 @@
+<%# $Id: header.rhtml 162 2005-12-17 06:21:28Z taki $ %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="generator" content="SleWiki <%= SleWiki::VERSION %>">
+  <link rel="stylesheet" charset="euc-jp" type="text/css" href="./theme/template/template.css" media="all">
+  <link rel="stylesheet" charset="euc-jp" type="text/css" href="<%= SleWiki::Config[:css_path] %>" media="all">
+<% if page_id = @cgi.escape_param('page_id') %>
+  <title><%= SleWiki::Config[:title] %> - <%= page_id.unescape %></title>
+<% else %>
+  <title><%= SleWiki::Config[:title] %></title>
+<% end %>
+</head>
+<body>
+<h1><a href="<%= SleWiki::Config[:indexpath] %>?act=top_page"><%= SleWiki::Config[:title] %></a></h1>
+<div class="menu">
+<form method="post" action="<%= SleWiki::Config[:indexpath] %>">
+
+[
+<% if page_id = @cgi.escape_param('page_id') %>
+<a href="<%= SleWiki::Config[:indexpath] %>?act=edit&page_id=<%= page_id.escape %>"> <%= SleWiki::Msg["edit"] %> </a>|
+<% history_path = SleWiki::Config[:store_path] + "/" + page_id.escape + SleWiki::Config[:store_extname] + ".1"
+   history_path.untaint %>
+<% if File.exist?(history_path) %>
+<a href="<%= SleWiki::Config[:indexpath] %>?act=history&page_id=<%= page_id.escape %>"> <%= SleWiki::Msg["history"] %> </a>
+<% else %>
+ <%= SleWiki::Msg["history"] %> 
+<% end %>
+<% else %>
+ <%= SleWiki::Msg["edit"] %> | <%= SleWiki::Msg["history"] %>
+<% end %>
+]
+&nbsp;
+[
+<a href="<%= SleWiki::Config[:indexpath] %>?act=new_page"> <%= SleWiki::Msg["new_page"] %> </a>|
+<a href="<%= SleWiki::Config[:indexpath] %>?act=top_page"> <%= SleWiki::Msg["top_page"] %> </a>|
+<a href="<%= SleWiki::Config[:indexpath] %>?act=list"> <%= SleWiki::Msg["list"] %> </a>|
+<a href="<%= SleWiki::Config[:indexpath] %>?act=recent"> <%= SleWiki::Msg["recent"] %> </a>
+]
+&nbsp;
+[
+<a href="<%= SleWiki::Config[:indexpath] %>?act=admin"> <%= SleWiki::Msg["admin"] %> </a>
+]
+&nbsp;
+<input type="hidden" name="act" value="search">
+<input type="text" name="search_text" size="30" value="">
+<input type="submit" value="Search">
+</form>
+</div>
