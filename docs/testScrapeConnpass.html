@@ -1,0 +1,2264 @@
+<!DOCTYPE html>
+<!--
+
+
+   _|_|_|    _|_|    _|_|_|    _|_|_|    _|_|_|      _|_|_|    _|_|_|    _|_|_|
+ _|        _|    _|  _|    _|  _|    _|  _|    _|  _|    _|  _|_|      _|_|
+ _|        _|    _|  _|    _|  _|    _|  _|    _|  _|    _|      _|_|      _|_|
+   _|_|_|    _|_|    _|    _|  _|    _|  _|_|_|      _|_|_|  _|_|_|    _|_|_|
+                                         _|
+                                         _|
+-->
+<html lang="ja" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"fce4d6a551",applicationID:"60638475"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"fce4d6a551","applicationID":"60638475","transactionName":"YFwHbUQFD0NRAk1dWlkWI0xYBxVZXw8WV1pZVxVYRRdPU18TXBpYWFsMVVNKF1lVFkoOeFhbDFVTMghVRw==","queueTime":0,"applicationTime":249,"agent":""}</script>
+<meta http-equiv="content-style-type" content="text/css; charset=utf-8" />
+<meta name="keywords" content="connpass,コンパス,イベント,IT勉強会,検索,開催,募集,参加,ソーシャル連携,アクセス解析,手数料無料" />
+<meta name="description" content="「AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介」の参加者・申込者の一覧です。" />
+<title>AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介 - 参加者・申込者一覧 - connpass</title>
+
+
+<link type="text/css" href="https://connpass.com/static/css/connpass.css?20200116142023
+" rel="stylesheet" media="all" />
+
+
+
+
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="connpass" />
+<meta property="fb:app_id" content="259235460759625" />
+
+<meta property="og:url" content="https://do2dle.connpass.com/event/151286/participation/" />
+
+<meta property="og:image" content="https://connpass.com/static/img/468_468.png" />
+
+<meta itemprop="image" content="https://connpass.com/static/img/72_72.png" />
+
+<meta property="og:title" content="connpass - エンジニアをつなぐIT勉強会支援プラットフォーム" />
+<meta property="og:description" content="connpassはイベントやIT勉強会の開催、さらに参加者の集客に便利です。コミュニティやグループの運営やイベントの検索、事前決済もできます。" />
+<meta itemprop="name" content="connpass - エンジニアをつなぐIT勉強会支援プラットフォーム" />
+<meta itemprop="description" content="connpassはイベントやIT勉強会の開催、さらに参加者の集客に便利です。コミュニティやグループの運営やイベントの検索、事前決済もできます。" />
+
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="https://connpass.com/static/img/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="apple-touch-icon-precomposed" href="https://connpass.com/static/img/apple_touch_icon.png" />
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+  if (typeof console == "undefined") {window.console={log: function () {}};console.warn = console.debug = console.log;}
+</script>
+
+<script type="text/javascript">
+  function cst(cat, evt, targetUrl) {
+    if (window._gaq) {
+      _gaq.push(['_trackSocial', cat, evt, targetUrl]);
+    } else {
+      console.log("trackSocial(" + cat + ", " + evt + ", " + targetUrl + ")");
+    }
+  };
+  function cet(cat, evt, label, value, non_interaction) {
+    if (!label) {
+      label = 'None';
+    }
+    if (window._gaq) {
+      _gaq.push(['_trackEvent', cat, evt, label, value, non_interaction]);
+    } else {
+      console.log("trackEvent(" + cat + ", " + evt + ", " + label + ", " + value + ", " + non_interaction + ")");
+    }
+  };
+  function tol(link, cat, evt, label, value, non_interaction) {
+    cet(cat, evt, label, value, non_interaction);
+    if (link) {
+      var func;
+      if (link.href) {
+        func = function() {
+          document.location.href = link.href;
+        };
+      } else {
+        if (link.submit) {
+          func = function() {
+            link.submit();
+          };
+        } else {
+          if (link.form) {
+            func = function() {
+              link.form.submit();
+            };
+          }
+        }
+      }
+      if (func) {
+        setTimeout(func, 100);
+      }
+    }
+  };
+</script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26036000-1']);
+  _gaq.push(['_setDomainName', 'connpass.com']);
+  _gaq.push(['_setCustomVar', 1, 'Authenticated', 'false', 1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+    <script type="text/javascript">
+        
+        var event_tech_tags = ["\u81ea\u7136\u8a00\u8a9e\u51e6\u7406", "\u6a5f\u68b0\u5b66\u7fd2", "AI", "NLP", "\u8ad6\u6587"];
+    </script>
+
+
+<script language="JavaScript" type="text/javascript" charset="UTF-8" src="//cdn.bigmining.com/private/media/js/connpass_bigmining.js"></script>
+
+
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+<script type="text/javascript">
+var path_value = location.pathname.substr(0,40);
+var parameter_value = location.search.substr(0, 40);
+var ref_value = "null";
+if (document.referrer){
+var ref_array=new Array();
+ref_array=document.referrer.split("/"); 
+ref_value = ref_array[2];}
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+
+
+    googletag.pubads().setTargeting('URLs', path_value).setTargeting('Ref', ref_value).setTargeting('Para', parameter_value);
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script>
+
+</head>
+
+<body class="event_participation">
+
+<div id="wrapper" class="lang_ja">
+
+  <div id="header">
+    <div class="container clearfix">
+      <h1><a href="https://connpass.com/" title="connpass - エンジニアをつなぐIT勉強会支援プラットフォーム"><img src="https://connpass.com/static/img/common/sitelogo_266x132_bp.png" alt="connpass - エンジニアをつなぐIT勉強会支援プラットフォーム" height="66"></a></h1>
+
+      
+        <form action="https://connpass.com/search/" method="GET" id="header_event_search_form">
+          <div class="header_search">
+            <input type="text" class="form_input_text" name="q" id="id_q" value="" placeholder="イベント検索">
+            <input type="hidden" name="start_from" value="2020/01/19">
+            <input type="hidden" name="start_to" value="2020/07/19">
+            <button type="submit" class="btn btn_default btn_size_small"><img src="https://connpass.com/static/img/common/icon_search.png" alt="イベント検索"></button>
+          </div>
+        </form>
+      
+
+      
+        <div class="header_nav_contents">
+          <ul>
+          
+            <li><a href="https://connpass.com/#category_link_list">カテゴリ一覧</a></li>
+          
+            <li><a href="https://connpass.com/explore/">新着イベント</a></li>
+          </ul>
+        </div>
+        
+          
+            <div class="header_nav_login">
+              <a class="btn btn_default login" href="https://connpass.com/login/">ログイン・新規登録</a>
+            </div>
+          
+        
+      
+
+
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+<div id="contents" class="container main_side_column clearfix">
+  <div id="flash_message_area" style="display: none;">
+    
+  </div>
+
+  
+  <div class="clearfix">
+    
+      
+      <div id="main">
+        
+<div class="title_with_thumb mb_20">
+  <span class="thumbnail">
+    <a href="https://connpass.com/event/151286/" title="AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介">
+    
+     <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/4d/e1/4de11b89f4c0819f25ad1d95b3c420bb.png" width="48" height="48" alt="AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介">
+    
+    </a>
+  </span>
+  <a href="https://do2dle.connpass.com/event/151286/" class="event_title"><span class="icon_red_four_right"></span>AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介</a>
+  <h2 class="page_title">イベント参加者・申込者一覧</h2>
+</div>
+
+
+
+
+<div class="concerned_area mb_30">
+  <h3 class="title_bg mb_10">イベント関係者</h3>
+
+  <table class="common_table participants_table padding_10">
+    <thead>
+      <tr>
+        <th colspan="2">管理者<span class="participants_count">6人</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/TakahiroIkushima/open/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/8f/cd/8fcd42acf9095fa5e8733970bbe3ad56.png" alt="ター" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/TakahiroIkushima/open/">ター</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+          <span><img src="https://connpass.com/static/img/common/icon_facebook.png" alt="facebook" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+      
+        
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/tflare/open/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/1f/06/1f0673d34769b42f7da540d5367f4a7d.png" alt="tflare" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/tflare/open/">tflare</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+          <a href="https://twitter.com/intent/user?screen_name=taki_tflare" target="_blank" onClick="cet('EventParticipationList', 'twitter_profile_click');" title="Twitterを見る"><img src="https://connpass.com/static/img/common/icon_twitter.png" alt="Twitterを見る" width="20" height="20" /></a>
+      
+    
+    
+      
+      
+          <span><img src="https://connpass.com/static/img/common/icon_facebook.png" alt="facebook" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+      
+        
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/Itsukara/open/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/89/08/8908cca577d10299011e796a73dc512f.png" alt="Itsukara" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/Itsukara/open/">Itsukara</a>
+          
+        
+      </p>
+      <p class="user_profile">日立の中央研究所とシステム開発研究所でコンパイラを20年間研究開発後、ストレージソリューション...</p>
+    </div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+          <a href="https://twitter.com/intent/user?screen_name=iitt21" target="_blank" onClick="cet('EventParticipationList', 'twitter_profile_click');" title="Twitterを見る"><img src="https://connpass.com/static/img/common/icon_twitter.png" alt="Twitterを見る" width="20" height="20" /></a>
+      
+    
+    
+      
+      
+          <span><img src="https://connpass.com/static/img/common/icon_facebook.png" alt="facebook" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <a href="https://github.com/Itsukara" target="_blank" onClick="cet('EventParticipationList', 'github_profile_click');" title="GitHubを見る" class="last"><img src="https://connpass.com/static/img/common/icon_github.png" alt="GitHubを見る" width="20" height="20" /></a>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+      
+        
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/TomSuzuki/open/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/eb/a1/eba133e6db8cb1c776f0395fdd7ca00b.png" alt="TomSuzuki" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/TomSuzuki/open/">TomSuzuki</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+          <span><img src="https://connpass.com/static/img/common/icon_facebook.png" alt="facebook" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+      
+        
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/Autoalge/open/">
+          
+            <img src="https://connpass.com/static/img/common/user_no_image.gif" alt="Autoalge" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/Autoalge/open/">Autoalge</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+        <span title="facebook未連携"><img src="https://connpass.com/static/img/common/icon_gray_facebook.png" alt="facebook未連携" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+      
+        
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/fujiftb/open/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/aa/5e/aa5e12baec2e1be8971a1617d93f9d5c.png" alt="fujiftb" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/fujiftb/open/">fujiftb</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+          <span><img src="https://connpass.com/static/img/common/icon_facebook.png" alt="facebook" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+      
+    </tbody>
+
+
+
+    <thead>
+      <tr>
+        <th colspan="2">
+          
+            発表者<span class="participants_count">1人</span>
+          
+          <small>（connpassユーザーのみ表示しています）</small>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/tflare/presentation/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/1f/06/1f0673d34769b42f7da540d5367f4a7d.png" alt="tflare" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/tflare/presentation/">tflare</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+          <a href="https://twitter.com/intent/user?screen_name=taki_tflare" target="_blank" onClick="cet('EventParticipationList', 'twitter_profile_click');" title="Twitterを見る"><img src="https://connpass.com/static/img/common/icon_twitter.png" alt="Twitterを見る" width="20" height="20" /></a>
+      
+    
+    
+      
+      
+          <span><img src="https://connpass.com/static/img/common/icon_facebook.png" alt="facebook" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+      
+    </tbody>
+
+  </table>
+</div>
+
+<div class="applicant_area">
+<h3 class="title_bg mb_20">イベント申込者</h3>
+
+
+
+
+
+
+<a name="participants"><h3 class="title_3">参加者一覧</h3></a>
+  
+    
+    <div class="participation_table_area mb_20">
+      <table class="common_table participants_table padding_10">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <span class="label_ptype_name">参加枠</span>
+              参加者
+              <span class="participants_count">14人</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/RyousukeSatou/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/bd/ba/bdbab4b626d4713a243b307ae8a4eec3.png" alt="sarrrrry" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">参加枠</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/RyousukeSatou/">sarrrrry</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+          <a href="https://twitter.com/intent/user?screen_name=__sarrrrry" target="_blank" onClick="cet('EventParticipationList', 'twitter_profile_click');" title="Twitterを見る"><img src="https://connpass.com/static/img/common/icon_twitter.png" alt="Twitterを見る" width="20" height="20" /></a>
+      
+    
+    
+      
+      
+          <span><img src="https://connpass.com/static/img/common/icon_facebook.png" alt="facebook" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <a href="https://github.com/sarrrrry" target="_blank" onClick="cet('EventParticipationList', 'github_profile_click');" title="GitHubを見る" class="last"><img src="https://connpass.com/static/img/common/icon_github.png" alt="GitHubを見る" width="20" height="20" /></a>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/hirokik/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/fc/28/fc28ee0fc5bb7873a653085ed701c7d9.png" alt="hirokik" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">参加枠</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/hirokik/">hirokik</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+          <a href="https://twitter.com/intent/user?screen_name=h_kawahara" target="_blank" onClick="cet('EventParticipationList', 'twitter_profile_click');" title="Twitterを見る"><img src="https://connpass.com/static/img/common/icon_twitter.png" alt="Twitterを見る" width="20" height="20" /></a>
+      
+    
+    
+      
+      
+        <span title="facebook未連携"><img src="https://connpass.com/static/img/common/icon_gray_facebook.png" alt="facebook未連携" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/fortissimo48/">
+          
+            <img src="https://connpass.com/static/img/common/user_no_image.gif" alt="fortissimo48" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">参加枠</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/fortissimo48/">fortissimo48</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介 に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+        <span title="facebook未連携"><img src="https://connpass.com/static/img/common/icon_gray_facebook.png" alt="facebook未連携" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/tizawa3/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/87/f0/87f083d872b97d728a3fe2d782d2da8d.png" alt="tizawa3" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">参加枠</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/tizawa3/">tizawa3</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介 に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+          <a href="https://twitter.com/intent/user?screen_name=tizawa3" target="_blank" onClick="cet('EventParticipationList', 'twitter_profile_click');" title="Twitterを見る"><img src="https://connpass.com/static/img/common/icon_twitter.png" alt="Twitterを見る" width="20" height="20" /></a>
+      
+    
+    
+      
+      
+          <span><img src="https://connpass.com/static/img/common/icon_facebook.png" alt="facebook" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/Zanadu/">
+          
+            <img src="https://connpass.com/static/img/common/user_no_image.gif" alt="Zanadu" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">参加枠</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/Zanadu/">Zanadu</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介 に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+        <span title="facebook未連携"><img src="https://connpass.com/static/img/common/icon_gray_facebook.png" alt="facebook未連携" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/Masayuki_T/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/04/a3/04a3b35079690cb1af3c3064fc491f62.png" alt="Masayuki_T" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">参加枠</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/Masayuki_T/">Masayuki_T</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介 に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+        <span title="facebook未連携"><img src="https://connpass.com/static/img/common/icon_gray_facebook.png" alt="facebook未連携" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/miyabi/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/20/d2/20d2711f2c2a3c746aff964c3310dc4e.png" alt="miyabi" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">参加枠</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/miyabi/">miyabi</a>
+          
+        
+      </p>
+      <p class="user_profile">Ciao! Sono interessato a Prog. rock.</p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介 に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+          <a href="https://twitter.com/intent/user?screen_name=miyabiogino" target="_blank" onClick="cet('EventParticipationList', 'twitter_profile_click');" title="Twitterを見る"><img src="https://connpass.com/static/img/common/icon_twitter.png" alt="Twitterを見る" width="20" height="20" /></a>
+      
+    
+    
+      
+      
+          <span><img src="https://connpass.com/static/img/common/icon_facebook.png" alt="facebook" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <a href="https://github.com/ogino" target="_blank" onClick="cet('EventParticipationList', 'github_profile_click');" title="GitHubを見る" class="last"><img src="https://connpass.com/static/img/common/icon_github.png" alt="GitHubを見る" width="20" height="20" /></a>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/yanao333/">
+          
+            <img src="https://connpass.com/static/img/common/user_no_image.gif" alt="yanao333" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">参加枠</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/yanao333/">yanao333</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介 に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+        <span title="facebook未連携"><img src="https://connpass.com/static/img/common/icon_gray_facebook.png" alt="facebook未連携" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/s_kohinata/">
+          
+            <img src="https://connpass.com/static/img/common/user_no_image.gif" alt="s_kohinata" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">参加枠</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/s_kohinata/">s_kohinata</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+        <span title="facebook未連携"><img src="https://connpass.com/static/img/common/icon_gray_facebook.png" alt="facebook未連携" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/yabuchanchan/">
+          
+            <img src="https://connpass.com/static/img/common/user_no_image.gif" alt="yabuchanchan" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">参加枠</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/yabuchanchan/">yabuchanchan</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+        <span title="facebook未連携"><img src="https://connpass.com/static/img/common/icon_gray_facebook.png" alt="facebook未連携" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/Noguchi_tatsuya/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/9b/bb/9bbb481ee792d4ab0dec29b6ce63f33b.png" alt="Noguchi_tatsuya" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">参加枠</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/Noguchi_tatsuya/">Noguchi_tatsuya</a>
+          
+        
+      </p>
+      <p class="user_profile">https://tatsuya-noguchi.com/</p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介 に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+          <span><img src="https://connpass.com/static/img/common/icon_facebook.png" alt="facebook" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/smatsumoto/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/5b/dd/5bdd9b383e9a62c111043001c7ae5e7f.png" alt="smatsumt" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">参加枠</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/smatsumoto/">smatsumt</a>
+          
+        
+      </p>
+      <p class="user_profile">a.k.a Shinji Kawaguchi</p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+          <a href="https://twitter.com/intent/user?screen_name=smatsumt" target="_blank" onClick="cet('EventParticipationList', 'twitter_profile_click');" title="Twitterを見る"><img src="https://connpass.com/static/img/common/icon_twitter.png" alt="Twitterを見る" width="20" height="20" /></a>
+      
+    
+    
+      
+      
+        <span title="facebook未連携"><img src="https://connpass.com/static/img/common/icon_gray_facebook.png" alt="facebook未連携" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/mela_ksk/">
+          
+            <img src="https://connpass.com/static/img/common/user_no_image.gif" alt="mela_ksk" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">参加枠</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/mela_ksk/">mela_ksk</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介 に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+        <span title="facebook未連携"><img src="https://connpass.com/static/img/common/icon_gray_facebook.png" alt="facebook未連携" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/Mukusan55/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/31/8a/318ad6144353e3986fcdceb9db7d804e.png" alt="Mukusan55" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">参加枠</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/Mukusan55/">Mukusan55</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+        <span title="facebook未連携"><img src="https://connpass.com/static/img/common/icon_gray_facebook.png" alt="facebook未連携" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+          
+        </tbody>
+      </table>
+    </div>
+    
+  
+    
+    <div class="participation_table_area mb_20">
+      <table class="common_table participants_table padding_10">
+        <thead>
+          <tr>
+            <th colspan="2">
+              <span class="label_ptype_name">自然言語処理　既発表者/発表予定者</span>
+              参加者
+              <span class="participants_count">3人</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/TomSuzuki/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/eb/a1/eba133e6db8cb1c776f0395fdd7ca00b.png" alt="TomSuzuki" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">自然言語処理　既発表者/発表予定者</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/TomSuzuki/">TomSuzuki</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介 に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+          <span><img src="https://connpass.com/static/img/common/icon_facebook.png" alt="facebook" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/NaotoMoriyama/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/83/68/83688fb72173e45ade36961ae86bb538.png" alt="NaotoMoriyama" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">自然言語処理　既発表者/発表予定者</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/NaotoMoriyama/">NaotoMoriyama</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+          <a href="https://twitter.com/intent/user?screen_name=vimmode" target="_blank" onClick="cet('EventParticipationList', 'twitter_profile_click');" title="Twitterを見る"><img src="https://connpass.com/static/img/common/icon_twitter.png" alt="Twitterを見る" width="20" height="20" /></a>
+      
+    
+    
+      
+      
+        <span title="facebook未連携"><img src="https://connpass.com/static/img/common/icon_gray_facebook.png" alt="facebook未連携" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+            
+
+
+<tr>
+  <td class="user">
+    <div class="user_info">
+    
+      
+        <a class="image_link" href="https://connpass.com/user/TakahiroIkushima/">
+          
+            <img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/8f/cd/8fcd42acf9095fa5e8733970bbe3ad56.png" alt="ター" width="36" height="36">
+          
+        </a>
+      
+    
+
+    
+      
+      <span class="label_ptype_name">自然言語処理　既発表者/発表予定者</span>
+      
+      <span class="label_status_tag">
+        
+          参加者
+        
+      </span>
+    
+
+      <p class="display_name">
+        
+          
+            <a href="https://connpass.com/user/TakahiroIkushima/">ター</a>
+          
+        
+      </p>
+      <p class="user_profile"></p>
+    </div>
+    
+      <div class="comment">AI&amp;機械学習しよう！ESG評価を用いたマルチファクター投資とNLPライブラリGiNZAの紹介 に参加を申し込みました！</div>
+    
+  </td>
+  <td class="social text_center">
+  
+  
+    
+      
+      
+        <span title="Twitter未連携"><img src="https://connpass.com/static/img/common/icon_gray_twitter.png" alt="Twitter未連携" width="20" height="20" /></span>
+      
+    
+    
+      
+      
+          <span><img src="https://connpass.com/static/img/common/icon_facebook.png" alt="facebook" width="20" height="20" /></span>
+      
+    
+
+    
+      
+      
+        <span title="GitHub未連携" class="last"><img src="https://connpass.com/static/img/common/icon_gray_github.png" alt="GitHub未連携" width="20" height="20" /></span>
+      
+    
+
+    
+    
+    
+
+  
+  </td>
+</tr>
+
+          
+          
+        </tbody>
+      </table>
+    </div>
+    
+  
+
+
+
+
+
+
+
+</div>
+
+      </div>
+    
+    
+    <div id="side_area">
+      
+
+
+<div class="side_box side_border_area series_area">
+  
+  <h2 class="title">グループ情報</h2>
+  <p class="series_title"><a href="https://do2dle.connpass.com/">AI&amp;機械学習しよう！（Do2dle）</a></p>
+  <p class="series_sub_title"></p>
+
+  <div class="clearfix">
+    <a href="https://do2dle.connpass.com/" class="image_link"><img src="https://connpass-tokyo.s3.amazonaws.com/thumbs/87/85/8785778b080bc16919d01fdcaa10cd2c.png" width="72" height="48" alt="このグループのイメージ画像" /></a>
+    <table>
+      <tbody>
+        <tr>
+          <th>メンバー数</th>
+          <td><a href="https://do2dle.connpass.com/participation/">401人</a></td>
+        </tr>
+        <tr>
+          <th>イベント数</th>
+          <td><a href="https://do2dle.connpass.com/event/">27回</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    
+      <h4>開催前のイベント</h4>
+      <ul class="common_ul">
+      
+        <li><a href="https://do2dle.connpass.com/event/161217/">AI&amp;機械学習しよう！『人工知能と進化論』</a></li>
+      
+      </ul>
+    
+
+    
+      <h4>過去のイベント</h4>
+      <ul class="common_ul">
+      
+        <li><a href="https://do2dle.connpass.com/event/156277/">AI&amp;機械学習しよう！BERTをQAタスクに転用</a></li>
+      
+      </ul>
+    
+
+  
+</div>
+
+
+<div class="side_box side_border_area is_help">
+  <h2 class="side_title">参加者と交流するには？</h2>
+
+  <h3 class="side_subtitle">
+      
+      <a href="https://connpass.com/settings/">設定ページ</a>からTwitterやFacebookと連携してみましょう！
+      
+  </h3>
+  <p class="mb_10">お友達がイベントを開催したり、イベントを申し込んだりすると、メールで通知がきたり、トップページに表示されたりします。</p>
+  <hr class="mb_10">
+  <p class="text_right"><span class="icon_to_guide"><a href="http://help.connpass.com/basic/settings" target="_blank">詳しくはこちら</a></span></p>
+</div>
+
+
+
+
+
+<div class="side_box side_border_area is_help">
+  <h2 class="side_title">抽選について</h2>
+  <h3 class="side_subtitle">抽選とは？</h3>
+  <p class="mb_10">先着順で参加者が決定されるのではなく、抽選で参加者が決定します。</p>
+  <hr class="mb_10">
+  <h3 class="side_subtitle">抽選結果は？</h3>
+  <p class="mb_10">抽選結果は、「抽選発表日」にメールで通知されます。また、「抽選発表日」以降であれば、参加者一覧ページでも確認できます。</p>
+  <hr class="mb_10">
+  <p class="text_right"><span class="icon_to_guide"><a href="http://help.connpass.com/participants/event-lottery" target="_blank">詳しくはこちら</a></span></p>
+</div>
+
+
+
+    </div>
+    
+  </div>
+  
+</div>
+
+
+
+
+  <div id="footer">
+    <div class="footer_link_area clearfix">
+      <div class="layout_column_4 footer_site">
+        <div class="mb_5"><a href="https://connpass.com/" title="サイトのトップページへ"><img src="https://connpass.com/static/img/common/sitelogo_295x100.png" alt="connpass" class="connpass">エンジニアをつなぐ<br>IT勉強会支援プラットフォーム</a></div>
+        <div class="mb_5">
+        
+        <a href="https://itunes.apple.com/jp/app/connpass/id723317753?mt=8" target="_blank" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/ja-jp/appstore-lrg.svg) no-repeat;width:135px;height:40px;background-size:contain;" onClick="cet('Marketing', 'iphone_app_banner', 'footer_banner', undefined, true);"></a>
+        
+        </div>
+        <a href="http://twitter.com/connpass_jp" target="_blank" class="mr_5"><img src="https://connpass.com/static/img/common/icon_twitter_official.png" alt="Twitter公式アカウント"></a>
+        <a href="http://www.facebook.com/connpass" target="_blank"><img src="https://connpass.com/static/img/common/icon_facebook_official.png" alt="Facebookページ"></a>
+
+      </div>
+      <div class="layout_column_4 footer_help">
+        <ul class="cmn_list">
+          <li><a href="http://help.connpass.com/" target="_blank" title="connpassのヘルプ">ご利用ガイド</a></li>
+          <li><a href="http://help.connpass.com/faq/" target="_blank">よくある質問</a></li>
+          <li><a href="https://connpass.com/inquiry/">connpassへのお問い合わせ</a></li>
+          <li><a href="https://connpass.com/term/">利用規約</a></li>
+          <li><a href="https://www.beproud.jp/company/" target="_blank">運営会社</a></li>
+          <li><a href="https://connpass.com/about/api/">API</a></li>
+          <li><a href="https://connpass.com/law/">特定商取引法に基づく表示</a></li>
+          <li><a href="https://connpass.com/privacy/">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+      <div class="layout_column_4 footer_sns">
+      <ul class="cmn_list">
+        <li class="li_icon_hint"><a href="https://connpass.com/about/" title="connpassの機能をタイムライン風に紹介">機能紹介</a></li>
+        <li class="li_icon_hint"><a href="https://connpass.com/about/comparison/" title="connpassと他イベントサイトとの機能比較">他サービスとの比較</a></li>
+        <li class="li_icon"><a href="https://connpass.com/explore/">新着イベント</a></li>
+        <li class="li_icon_feed"><a href="https://connpass.com/explore/ja.atom" target="_blank">新着イベントfeed</a></li>
+
+      </ul>
+      </div>
+      <div class="layout_column_4 footer_feedback">
+      
+
+<div class="feedback_area">
+  <div id="FeedbackForm">
+    <p class="em">connpassへのご意見をお聞かせください</p>
+    <div class="FollowBox">
+      <textarea class="feedback FeedbackText" cols="28" rows="5" name="feedback"></textarea>
+      <button class="SendFeedback btn btn_default btn_size_small" disabled="disabled">意見を送る</button>
+      <p>返答が必要な方は<a href="https://connpass.com/inquiry/">「connpassへのお問い合わせ」</a>をご利用ください</p>
+    </div>
+    <div class="PostedBox text_center" style="display:none;">
+      <p class="em">ご意見ありがとうございました！</p>
+      <p>いただいたご意見はスタッフが確認いたします。個々のご意見に返信できないことを予めご了承ください。</p>
+      <button class="link NewFeedback btn btn_default btn_size_small">さらに意見を送る</button>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+    <div class="footer_link_area clearfix">
+      <div class="footer_beproud"><a href="https://www.beproud.jp/company/" target="_blank"><img src="https://connpass.com/static/img/common/logo_beproud.png" alt="BePROUD" title="BePROUD" />connpass は株式会社ビープラウドが開発・運営しています</a></div>
+      <address>&copy; 2020 BeProud, Inc. All Rights Reserved.</address>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+<script id="EventCreateTemplate" type="text/html">
+  <div class="popup">
+    <div class="popup_wrapper">
+      <div class="popup_header">
+        <h2 class="popup_title">イベントを作成する</h2>
+        <span class="close_btn_area">
+          <span class="btn btn_default btn_size_small corner_none modal-close" title="閉じる"><span class="icon_black_close"></span></span>
+        </span>
+      </div>
+      <div class="popup_contents text_center">
+        <p class="font_16 mb_10"><strong>イベント名を入力してください</strong></p>
+        <input name="title" type="text" class="form_input_text form_width_450 font_18">
+
+        <div class="mt_10 mb_30">
+          <button type="submit" class="EventCreateSubmit btn btn_action btn_size_large" onClick="cet('Create', 'create_event');">イベントを作成</button>
+        </div>
+        <div class="right">
+          <a href="https://connpass.com/group/new/"><span class="icon_red_four_right"></span>グループを作成</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="MessageTemplate" type="text/html">
+  <p class="message <%= level %>"><%- message %></p>
+</script>
+
+
+<div id="fb-root"></div>
+
+
+
+<div id="CurrentUserObj" style="display:none;" ></div>
+<div id="CSRFToken" style="display:none;" data-csrftoken="OFvtqIn3Q48uMfCyxYuNrQ9DJGXWCF1BGp4k21XEXTAC7YgU2xcLQIt9gcYJDMEm"></div>
+
+
+<script type="text/javascript" src="//d-cache.microad.jp/js/td_cnp_access.js"></script>
+<script type="text/javascript">
+  microadTd.CNP.start({"article_keyword": ["\u81ea\u7136\u8a00\u8a9e\u51e6\u7406", "\u6a5f\u68b0\u5b66\u7fd2", "AI", "NLP", "\u8ad6\u6587"]})
+</script>
+
+
+<script type="text/javascript" src="https://connpass.com/static/js/require.js?20200116142023
+"></script>
+<script type="text/javascript" src="https://connpass.com/static/js/connpass.min.js?20200116142023
+"></script>
+<script type="text/javascript">
+require.config({
+  
+  baseUrl: 'https://connpass.com/static/js/',
+  locale: 'ja',
+
+  config: {
+    'csrf': {
+      CSRF_COOKIE_NAME: 'connpass-csrftoken'
+    },
+    'sanca': {
+      
+      LOG_LEVEL: "WARNING",
+      HTTP_HOST: 'connpass.com',
+      STATIC_URL: 'https://connpass.com/static/',
+      MEDIA_URL: 'https://connpass.com/media/',
+      API_BASE_URL: 'https://do2dle.connpass.com/api'
+    }
+  }
+});
+</script>
+
+
+<script type="text/javascript">
+  require([
+    'jquery', 'jquerytools/tooltip.dynamic',
+    'jquerytools/tooltip.slide', 'design'
+  ], function($, Views) {
+    $(function() {
+      $('.Help').tooltip({
+        effect: 'slide',
+        position: 'bottom center',
+        offset: [20, 0],
+      }).dynamic({
+        bottom: {
+          direction: 'down',
+          bounce: true
+        }
+      });
+    });
+  });
+
+  require(['jquery', 'cs!sanca/views/personal_menu'], function($, Views) {
+    var personal_menu = new Views.PersonalMenu({
+      el: '#header',
+      dropdown_el: '#personalMenu'
+    });
+  });
+
+  require(['jquery', 'cs!sanca/views/feedback'], function($, Views) {
+    var feedbackform = new Views.FeedbackView({
+      el: '#FeedbackForm'
+    });
+  });
+
+</script>
+<script type="text/javascript">
+  window.fbAsyncInit = function() {
+    FB.init({
+      version: 'v2.8',
+      status: true,
+      appId: '259235460759625',
+      xfbml: true  // Like btn
+    });
+    FB.Event.subscribe('edge.create', function(targetUrl) {
+      typeof cst === "function" && cst('facebook', 'like', targetUrl);
+    });
+    FB.Event.subscribe('edge.remove', function(targetUrl) {
+      typeof cst === "function" && cst('facebook', 'unlike', targetUrl);
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/ja_JP/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+</body>
+</html>
